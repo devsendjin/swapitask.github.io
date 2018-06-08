@@ -1,0 +1,156 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.wrapper {
+	background-color: #e1e1e1;
+}
+
+.button {
+	background-color: coral;
+	padding: 1em 2em;
+	color: #fff;
+	border: 0;
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button:hover {
+	background-color: #333;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+	position: relative;
+	background-color: #f4f4f4;
+	position: fixed;
+	margin: 5% auto;
+	padding: 20px;
+	min-height: 150px;
+	width: 35%;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+	position: relative;
+	animation-name: modalopen;
+	animation-duration: 0.8s;
+}
+
+.loader {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader__img {
+	width: 50px;
+	height: 50px;
+}
+
+.modal-content  .list__item:nth-child(2n) {
+	margin-bottom: 15px;
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+		margin: 0% auto;
+	}
+	to {
+		opacity: 1;
+		margin: 5% auto;
+	}
+}
+
+.close__wrapper {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 40px;
+    height: 40px;
+	background-color: #228cdd;
+	text-align: center;
+	color: #ccc;
+	font-size: 28px;
+	border-bottom-left-radius: 17px;
+	cursor: pointer;
+}
+
+.close__btn {
+	transition: color 0.3s;
+	line-height: 1.6;
+}
+
+.close__wrapper:hover .close__btn {
+	color: #000;
+	text-decoration: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.list__item {
+	margin: 5px 0;
+	padding-left: 5px;
+	position: relative;
+}
+
+.list__item-title {
+	background-color: #c6c6c6;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+.list__desc {
+	font-style: italic;
+}
+
+.list__characters {
+	margin-bottom: 20px;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.film {
+	width: 50%;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+.film:last-child {
+	margin-right: 0;
+}
